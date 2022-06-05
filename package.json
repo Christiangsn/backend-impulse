@@ -6,6 +6,9 @@
   "author": "christiangsn <christianguimaraes1996@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "open:database": "npx prisma studio",
+    "migrate:dev": "npx prisma migrate dev",
+    "migrate": "npx prisma deploy",
     "dev": "ts-node-dev src/server.js"
   },
   "devDependencies": {
