@@ -9,4 +9,3 @@ export interface IDTOSubmitFeedbacks {
 export interface IDTOSubmitFeedbacksServices extends IUseCaseServices {
     execute: ({ type, comment, screenshot}: IDTOSubmitFeedbacks) => Promise<IServiceResponse>
 }
-

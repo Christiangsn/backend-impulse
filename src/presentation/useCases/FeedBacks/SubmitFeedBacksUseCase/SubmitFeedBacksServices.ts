@@ -1,5 +1,5 @@
-import { ICreateFeedBackRepository, IFeedBackCreateData } from "@domain/Data/FeedBacks/ICreateFeedBackRepository"
-import { IServiceResponse, IUseCaseServices } from "@presentation/Contracts/useCases"
+import { ICreateFeedBackRepository } from "@domain/Data/FeedBacks/ICreateFeedBackRepository"
+import { IServiceResponse } from "@presentation/Contracts/useCases"
 import { IDTOSubmitFeedbacks, IDTOSubmitFeedbacksServices } from "./SubmitFeedBacksDTO"
 
 export class SubmitFeedBacksServices implements IDTOSubmitFeedbacksServices {
