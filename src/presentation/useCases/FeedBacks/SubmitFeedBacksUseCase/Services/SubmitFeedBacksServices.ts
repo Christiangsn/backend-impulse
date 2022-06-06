@@ -1,7 +1,7 @@
 import { IMailAdapter } from '@domain/Adapters/Mail/IMailAdapter'
 import { ICreateFeedBackRepository } from "@domain/Data/FeedBacks/ICreateFeedBackRepository"
 import { IServiceResponse } from "@presentation/Contracts/useCases"
-import { IDTOSubmitFeedbacks, IDTOSubmitFeedbacksServices } from "./SubmitFeedBacksDTO"
+import { IDTOSubmitFeedbacks, IDTOSubmitFeedbacksServices } from "../SubmitFeedBacksDTO"
 
 export class SubmitFeedBacksServices implements IDTOSubmitFeedbacksServices {
     
@@ -18,7 +18,7 @@ export class SubmitFeedBacksServices implements IDTOSubmitFeedbacksServices {
                 `<div style="font-family: san-serif; font-size: 16px; color: #111;">`,
                 `<p>Tipo do feedback: ${type} </p>`,
                 `<p>Comentário: ${comment} </p>`,
-                `/div>`
+                `</div>`
             ].join('\n')
         })
 

@@ -2,7 +2,7 @@ import { Response, Request } from 'express'
 
 import { IUseCaseControllers } from "@presentation/Contracts/useCases";
 import { IServerError } from '@presentation/Errors/IServerError';
-import { IDTOSubmitFeedbacksServices } from './SubmitFeedBacksDTO';
+import { IDTOSubmitFeedbacksServices } from '../SubmitFeedBacksDTO';
 
 export class SubmitFeedBacksController implements IUseCaseControllers {
 
