@@ -15,7 +15,7 @@ export class SubmitFeedBacksController implements IUseCaseControllers {
 
         try {
             const { status, body } = await this.submitFeedbacksService.execute({ type, comment, screenshot })
-            return res.status(status).json(body)
+            return res.status(status).json({ status, body })
         } catch (err) {
             console.log('ERROR NO SUBMIT FEEDBACKS:')
             console.log(err)
