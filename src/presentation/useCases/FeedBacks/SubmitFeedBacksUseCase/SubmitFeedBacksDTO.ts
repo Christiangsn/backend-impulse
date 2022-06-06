@@ -3,7 +3,7 @@ import { IServiceResponse, IUseCaseServices } from "@presentation/Contracts/useC
 export interface IDTOSubmitFeedbacks {
     type: string
     comment: string
-    screenshot: string
+    screenshot?: string
 }
 
 export interface IDTOSubmitFeedbacksServices extends IUseCaseServices {

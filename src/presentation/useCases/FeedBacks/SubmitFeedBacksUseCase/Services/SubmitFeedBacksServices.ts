@@ -11,6 +11,14 @@ export class SubmitFeedBacksServices implements IDTOSubmitFeedbacksServices {
     ){}
  
     async execute ({ type, comment, screenshot }: IDTOSubmitFeedbacks): Promise<IServiceResponse> {
+
+        if(screenshot && !screenshot.startsWith('data:image/png;base64')) {
+            return {
+                body: 'Invalid screenshot format.',
+                status: 400
+            }
+        }
+
         await this.createFeedbacksRepository.create({ type, comment, screenshot })
         await this.mailAdapter.sendMail({ 
             subject: 'Novo FeedBack',

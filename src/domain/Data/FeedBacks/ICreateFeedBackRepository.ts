@@ -1,7 +1,7 @@
 export interface IFeedBackCreateData {
     type: string
     comment: string
-    screenshot: string
+    screenshot?: string
 }
 
 export interface ICreateFeedBackRepository {
