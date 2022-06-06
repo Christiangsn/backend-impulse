@@ -12,7 +12,6 @@ const makeSut = () => {
     return { sut, createFeedbackSpy, sendMailSpy }
 }
 
-
 describe('Submit Feedback', () => {
     
     it('Should be able to call injected functions', async () => {
@@ -75,5 +74,6 @@ describe('Submit Feedback', () => {
 
         expect(sutRequest).toEqual({ status: 400, body: 'Type is required.' })
     })
+
     
 })
