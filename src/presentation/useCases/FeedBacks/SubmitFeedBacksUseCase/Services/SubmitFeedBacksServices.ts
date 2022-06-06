@@ -12,6 +12,20 @@ export class SubmitFeedBacksServices implements IDTOSubmitFeedbacksServices {
  
     async execute ({ type, comment, screenshot }: IDTOSubmitFeedbacks): Promise<IServiceResponse> {
 
+        if(!type) {
+            return {
+                body: 'Type is required.',
+                status: 400
+            }    
+        }
+
+        if(!comment) {
+            return {
+                body: 'Comment is required.',
+                status: 400
+            }    
+        }
+
         if(screenshot && !screenshot.startsWith('data:image/png;base64')) {
             return {
                 body: 'Invalid screenshot format.',
