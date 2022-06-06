@@ -9,13 +9,18 @@
     "open:database": "npx prisma studio",
     "migrate:dev": "npx prisma migrate dev",
     "migrate": "npx prisma deploy",
-    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify -r dotenv/config ./src/main/Server.ts"
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify -r dotenv/config ./src/main/Server.ts",
+    "test": "jest"
   },
   "devDependencies": {
+    "@swc/jest": "^0.2.21",
     "@types/express": "^4.17.13",
+    "@types/jest": "^28.1.1",
     "@types/node": "^17.0.40",
     "@types/nodemailer": "^6.4.4",
+    "jest": "^28.1.0",
     "prisma": "^3.14.0",
+    "ts-node": "^10.8.1",
     "ts-node-dev": "^1.1.8",
     "tsconfig-paths": "^4.0.0",
     "typescript": "^4.7.3"
