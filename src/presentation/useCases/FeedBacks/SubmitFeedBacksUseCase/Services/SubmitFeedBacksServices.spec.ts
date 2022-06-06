@@ -12,7 +12,7 @@ const makeSut = () => {
     return { sut, createFeedbackSpy, sendMailSpy }
 }
 
-describe('Submit Feedback', () => {
+describe('Submit FeedbackServices useCases', () => {
     
     it('Should be able to call injected functions', async () => {
         const { sut, createFeedbackSpy, sendMailSpy } = makeSut()
